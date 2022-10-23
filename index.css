@@ -143,6 +143,8 @@ nav .right .inputbox .input input:focus {
     display: flex;
     flex-direction: column;
     padding-left: 2rem;
+    height: fit-content;
+    z-index: 0;
 }
 
 .trendingDiv h3 {
@@ -159,11 +161,16 @@ nav .right .inputbox .input input:focus {
     display: flex;
     align-items: center;
     gap: 0.6rem;
+    height: fit-content;
+    z-index: 2;
 }
 
 .trendingDiv .CardItem .item {
+    z-index: 10;
     position: relative;
     cursor: pointer;
+    width: fit-content;
+    height: fit-content;
     transition: all 0.5s ease-in-out;
     border-radius: 0.4rem;
 }
@@ -341,6 +348,9 @@ nav .right .inputbox .input input:focus {
 
 
 @media (max-width :768px) {
+    body {
+        overflow-x: hidden;
+    }
     nav {
         padding: 1rem;
     }
@@ -380,18 +390,15 @@ nav .right .inputbox .input input:focus {
 
     .trendingDiv{
         padding: 1rem;
-        width: 100%;
     }
 
     .trendingDiv h3 {
         font-size: 0.9rem;
     }
     .trendingDiv .CardItem{
-        overflow-x: auto;
-        z-index: 10;
+        overflow-x: scroll;
     }
     .trendingDiv .CardItem .item img {
         width: 10rem;
-        height: auto;
     }
 }
