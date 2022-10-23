@@ -139,62 +139,77 @@ nav .right .inputbox .input input:focus {
 }
 
 
-.trendingDiv {
+.trendingDiv,
+.recommendDiv,
+.animeDiv {
     display: flex;
     flex-direction: column;
     padding-left: 2rem;
-    position: relative;
     z-index: 0;
 }
 
-.trendingDiv h3 {
+.trendingDiv h3,
+.recommendDiv h3,
+.animeDiv h3 {
     color: white;
     width: fit-content;
 }
 
-.trendingDiv h3:hover {
+.trendingDiv h3:hover,
+.recommendDiv h3:hover,
+.animeDiv h3:hover {
     color: #1f80e0;
     cursor: pointer;
 }
 
-.trendingDiv .CardItem {
+.trendingDiv .CardItem,
+.recommendDiv .CardItem,
+.animeDiv .CardItem {
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    position: relative;
     z-index: 0;
 }
 
-.trendingDiv .CardItem .item {
-    position: relative;
+.trendingDiv .CardItem .item,
+.recommendDiv .CardItem .item,
+.animeDiv .CardItem .item {
     cursor: pointer;
     width: fit-content;
     transition: all 0.5s ease-in-out;
     border-radius: 0.4rem;
 }
 
-.trendingDiv .CardItem .item img {
+.trendingDiv .CardItem .item img,
+.recommendDiv .CardItem .item img,
+.animeDiv .CardItem .item img {
     width: 9rem;
     height: 100%;
     border-radius: 0.4rem;
 }
 
-.trendingDiv .CardItem .item:first-child:hover {
+.trendingDiv .CardItem .item:first-child:hover,
+.recommendDiv .CardItem .item img:first-child:hover,
+.animeDiv .CardItem .item img:first-child:hover {
     transform: scale(1.3) translate(15%, 0);
 }
 
-.trendingDiv .CardItem .item:hover {
+.trendingDiv .CardItem .item:hover,
+.recommendDiv .CardItem .item:hover,
+.animeDiv .CardItem .item:hover {
     z-index: 10;
     transform: scale(1.3);
     box-shadow: 0px 20px 20px 1px rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
 }
 
-.trendingDiv .CardItem .item .detail {
-    display: none;
+.trendingDiv .CardItem .item .detail,
+.recommendDiv .CardItem .item .detail,
+.animeDiv .CardItem .item .detail {
     position: absolute;
-    flex-direction: column;
     bottom: 0;
+    display: none;
+    flex-direction: column;
     height: 100%;
     gap: 0.1rem;
     padding: 0.5rem;
@@ -203,25 +218,37 @@ nav .right .inputbox .input input:focus {
     border-radius: 0.4rem;
 }
 
-.trendingDiv .CardItem .item .detail .title {
+.trendingDiv .CardItem .item .detail .title,
+.recommendDiv .CardItem .item .detail .title,
+.animeDiv .CardItem .item .detail .title {
     font-size: 0.6rem;
     color: white;
 }
 
 .trendingDiv .CardItem .item .detail .info,
-.trendingDiv .CardItem .item .detail .desc {
+.trendingDiv .CardItem .item .detail .desc,
+.recommendDiv .CardItem .item .detail .info,
+.recommendDiv .CardItem .item .detail .desc,
+.animeDiv .CardItem .item .detail .info,
+.animeDiv .CardItem .item .detail .desc {
     font-size: 0.5rem;
     color: white;
 }
 
 
-.trendingDiv .CardItem .item:hover .detail {
+.trendingDiv .CardItem .item:hover .detail,
+.recommendDiv .CardItem .item:hover .detail,
+.animeDiv .CardItem .item:hover .detail {
     transition: all 0.5s ease-in-out;
     display: flex;
 }
 
 .trendingDiv .CardItem .item .detail .watch,
-.trendingDiv .CardItem .item .detail .watchlist {
+.trendingDiv .CardItem .item .detail .watchlist,
+.recommendDiv .CardItem .item .detail .watch,
+.recommendDiv .CardItem .item .detail .watchlist,
+.animeDiv .CardItem .item .detail .watch,
+.animeDiv .CardItem .item .detail .watchlist {
     margin-top: 0.3rem;
     display: flex;
     text-transform: uppercase;
@@ -231,13 +258,21 @@ nav .right .inputbox .input input:focus {
 }
 
 .trendingDiv .CardItem .item .detail .watch i,
-.trendingDiv .CardItem .item .detail .watchlist i {
+.trendingDiv .CardItem .item .detail .watchlist i,
+.recommendDiv .CardItem .item .detail .watch i,
+.recommendDiv .CardItem .item .detail .watchlist i,
+.animeDiv .CardItem .item .detail .watch i,
+.animeDiv .CardItem .item .detail .watchlist i {
     font-size: 0.4rem;
     color: var(--primary);
 }
 
 .trendingDiv .CardItem .item .detail .watch span,
-.trendingDiv .CardItem .item .detail .watchlist span {
+.trendingDiv .CardItem .item .detail .watchlist span,
+.recommendDiv .CardItem .item .detail .watch span,
+.recommendDiv .CardItem .item .detail .watchlist span,
+.animeDiv .CardItem .item .detail .watch span,
+.animeDiv .CardItem .item .detail .watchlist span {
     font-size: 0.5rem;
     font-weight: 700;
     color: var(--primary);
@@ -348,28 +383,34 @@ nav .right .inputbox .input input:focus {
     body {
         overflow-x: hidden;
     }
+
     nav {
         padding: 1rem;
     }
+
     nav .left {
         gap: 1rem;
     }
+
     .footer {
         padding: 1rem;
         gap: 2rem;
         grid-template-columns: repeat(1, 1fr);
     }
+
     .footer .detail {
         grid-column: span 1 / span 1;
     }
-    .footer .detail .links{
+
+    .footer .detail .links {
         flex-direction: column;
     }
 
-    .footer .download{
+    .footer .download {
         grid-row: 1;
         align-items: flex-start;
     }
+
     .footer .social {
         grid-row: 2;
         align-items: flex-start;
@@ -378,27 +419,44 @@ nav .right .inputbox .input input:focus {
     nav .left span {
         display: none;
     }
+
     nav .right .inputbox {
         display: none;
     }
-    nav .right .subscribe{
+
+    nav .right .subscribe {
         display: none;
     }
 
-    .trendingDiv{
+    .trendingDiv,
+    .recommendDiv,
+    .animeDiv {
         padding: 1rem;
     }
 
-    .trendingDiv h3 {
+    .trendingDiv h3,
+    .recommendDiv h3,
+    .animeDiv h3 {
         font-size: 0.9rem;
     }
-    .trendingDiv .CardItem{
+
+    .trendingDiv .CardItem,
+    .recommendDiv .CardItem,
+    .animeDiv .CardItem {
         overflow-x: scroll;
     }
-    .trendingDiv .CardItem .item:hover{
+
+    .trendingDiv .CardItem .item:hover,
+    .recommendDiv .CardItem .item:hover,
+    .animeDiv .CardItem .item:hover {
+        transform: scale(1.3);
+        box-shadow: 0px 20px 20px 1px rgba(0, 0, 0, 0.1);
         z-index: 999;
     }
-    .trendingDiv .CardItem .item img {
+
+    .trendingDiv .CardItem .item img,
+    .recommendDiv .CardItem .item img,
+    .animeDiv .CardItem .item img {
         width: 10rem;
     }
 }
