@@ -169,6 +169,14 @@ nav .right .inputbox .input input:focus {
     align-items: center;
     gap: 0.6rem;
     z-index: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.trendingDiv .CardItem::-webkit-scrollbar,
+.recommendDiv .CardItem::-webkit-scrollbar,
+.animeDiv .CardItem::-webkit-scrollbar {
+    display: none;
 }
 
 .trendingDiv .CardItem .item,
@@ -445,11 +453,13 @@ nav .right .inputbox .input input:focus {
     .animeDiv .CardItem {
         overflow-x: scroll;
     }
+
     .trendingDiv .CardItem .item:first-child:hover,
     .recommendDiv .CardItem .item img:first-child:hover,
     .animeDiv .CardItem .item img:first-child:hover {
         transform: scale(1) translate(0, 0);
     }
+
     .trendingDiv .CardItem .item:hover,
     .recommendDiv .CardItem .item:hover,
     .animeDiv .CardItem .item:hover {
