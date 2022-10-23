@@ -159,20 +159,17 @@ nav .right .inputbox .input input:focus {
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    overflow-x: auto;
 }
 
 .trendingDiv .CardItem .item {
     position: relative;
-    width: 8rem;
-    height: auto;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     border-radius: 0.4rem;
 }
 
 .trendingDiv .CardItem .item img {
-    width: 100%;
+    width: 9rem;
     height: 100%;
     border-radius: 0.4rem;
 }
@@ -383,12 +380,18 @@ nav .right .inputbox .input input:focus {
 
     .trendingDiv{
         padding: 1rem;
+        width: 100%;
     }
 
     .trendingDiv h3 {
         font-size: 0.9rem;
     }
-    .trendingDiv .CardItem .item {
-        width: 15rem;
+    .trendingDiv .CardItem{
+        overflow-x: auto;
+        z-index: 10;
+    }
+    .trendingDiv .CardItem .item img {
+        width: 10rem;
+        height: auto;
     }
 }
