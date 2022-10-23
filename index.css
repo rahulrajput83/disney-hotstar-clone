@@ -1,0 +1,394 @@
+:root {
+    --primary: rgba(255, 255, 255, 0.6);
+}
+
+body {
+    margin: 0;
+    font-family: 'Red Hat Display';
+    padding: 0;
+    background: #131927;
+}
+
+nav {
+    padding: 1.8rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+}
+
+nav .left {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .left .menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    height: fit-content;
+}
+
+nav .left .menu .line {
+    background: var(--primary);
+    height: 2px;
+    width: 1.2rem;
+    display: block;
+}
+
+nav .left img {
+    transform: translate(0, -10%);
+}
+
+nav .item {
+    text-decoration: none !important;
+    color: var(--primary) !important;
+    font-size: 0.9rem !important;
+    background: none !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    border: none !important;
+    padding: none !important;
+    border-radius: 0 !important;
+    cursor: pointer;
+}
+
+nav .item:hover {
+    color: white !important;
+}
+
+nav .left .kids {
+    color: #FFAA05 !important;
+    font-weight: 700 !important;
+    font-style: italic;
+}
+
+nav .right {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .right a {
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    background: #1f80e0;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 0.8rem;
+    border-radius: 0.3rem;
+}
+
+nav .right a:hover {
+    opacity: 0.9;
+}
+
+nav .right .inputbox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+nav .right .inputbox .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+nav .right .inputbox .line {
+    width: 100%;
+    height: 0.15rem;
+    background: var(--primary);
+}
+
+nav .right .inputbox .input input {
+    background: none;
+    outline: none;
+    border: none;
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    width: 15rem;
+    transition: all 0.5s ease-in-out;
+}
+
+nav .right .inputbox .input input::placeholder {
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+nav .right .inputbox .input i {
+    color: var(--primary);
+    width: auto;
+}
+
+nav .right .inputbox .input input:focus {
+    width: 20rem;
+}
+
+
+.trendingDiv {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+}
+
+.trendingDiv h3 {
+    color: white;
+    width: fit-content;
+}
+
+.trendingDiv h3:hover {
+    color: #1f80e0;
+    cursor: pointer;
+}
+
+.trendingDiv .CardItem {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    overflow-x: auto;
+}
+
+.trendingDiv .CardItem .item {
+    position: relative;
+    width: 8rem;
+    height: auto;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    border-radius: 0.4rem;
+}
+
+.trendingDiv .CardItem .item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.4rem;
+}
+
+.trendingDiv .CardItem .item:first-child:hover {
+    transform: scale(1.3) translate(15%, 0);
+    z-index: 2;
+}
+
+.trendingDiv .CardItem .item:hover {
+    transform: scale(1.3);
+    z-index: 2;
+    box-shadow: 0px 20px 20px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+}
+
+.trendingDiv .CardItem .item .detail {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    bottom: 0;
+    height: 100%;
+    gap: 0.1rem;
+    padding: 0.5rem;
+    justify-content: flex-end;
+    background-image: linear-gradient(rgba(19, 25, 39, 0.1) 0%, rgba(19, 25, 39, 2) 60%);
+    border-radius: 0.4rem;
+}
+
+.trendingDiv .CardItem .item .detail .title {
+    font-size: 0.6rem;
+    color: white;
+}
+
+.trendingDiv .CardItem .item .detail .info,
+.trendingDiv .CardItem .item .detail .desc {
+    font-size: 0.5rem;
+    color: white;
+}
+
+
+.trendingDiv .CardItem .item:hover .detail {
+    transition: all 0.5s ease-in-out;
+    display: flex;
+}
+
+.trendingDiv .CardItem .item .detail .watch,
+.trendingDiv .CardItem .item .detail .watchlist {
+    margin-top: 0.3rem;
+    display: flex;
+    text-transform: uppercase;
+    gap: 0.5rem;
+    align-items: center;
+    color: var(--primary);
+}
+
+.trendingDiv .CardItem .item .detail .watch i,
+.trendingDiv .CardItem .item .detail .watchlist i {
+    font-size: 0.4rem;
+    color: var(--primary);
+}
+
+.trendingDiv .CardItem .item .detail .watch span,
+.trendingDiv .CardItem .item .detail .watchlist span {
+    font-size: 0.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 4rem 2.5rem;
+}
+
+.footer .detail {
+    grid-column: span 2 / span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer .detail .links {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer .detail .links a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #e4e4e4;
+    font-weight: 600;
+}
+
+.footer .detail .links a:hover {
+    color: #1f80e0;
+}
+
+.footer .detail span {
+    font-size: 0.75rem;
+    color: #e4e4e4;
+    text-align: justify;
+}
+
+.footer .social {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: center;
+    color: #e4e4e4;
+}
+
+.footer .social .links {
+    display: flex;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.footer .social .links a {
+    text-decoration: none;
+}
+
+.footer .social span,
+.footer .download span {
+    color: #e4e4e4;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.footer .social .links i {
+    text-decoration: none;
+    margin: auto;
+    color: #e4e4e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.2rem;
+    font-size: 1.4rem;
+    background: #192133;
+    cursor: pointer;
+}
+
+.footer .social .links i:hover {
+    background: #1f80e0;
+}
+
+.footer .download {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: center;
+    color: #e4e4e4;
+}
+
+.footer .download .links {
+    display: flex;
+    gap: 1rem
+}
+
+.footer .download .links img {
+    height: 2.5rem;
+}
+
+
+@media (max-width :768px) {
+    nav {
+        padding: 1rem;
+    }
+    nav .left {
+        gap: 1rem;
+    }
+    .footer {
+        padding: 1rem;
+        gap: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footer .detail {
+        grid-column: span 1 / span 1;
+    }
+    .footer .detail .links{
+        flex-direction: column;
+    }
+
+    .footer .download{
+        grid-row: 1;
+        align-items: flex-start;
+    }
+    .footer .social {
+        grid-row: 2;
+        align-items: flex-start;
+    }
+
+    nav .left span {
+        display: none;
+    }
+    nav .right .inputbox {
+        display: none;
+    }
+    nav .right .subscribe{
+        display: none;
+    }
+
+    .trendingDiv{
+        padding: 1rem;
+    }
+
+    .trendingDiv h3 {
+        font-size: 0.9rem;
+    }
+    .trendingDiv .CardItem .item {
+        width: 15rem;
+    }
+}
