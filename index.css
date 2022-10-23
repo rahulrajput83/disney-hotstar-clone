@@ -19,7 +19,7 @@ nav {
 
 nav .left {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
 }
@@ -46,6 +46,7 @@ nav .left img {
 }
 
 nav .item {
+    position: relative;
     text-decoration: none !important;
     color: var(--primary) !important;
     font-size: 0.9rem !important;
@@ -56,16 +57,61 @@ nav .item {
     padding: none !important;
     border-radius: 0 !important;
     cursor: pointer;
+    padding: 0.6rem;
 }
 
 nav .item:hover {
     color: white !important;
 }
 
-nav .left .kids {
+nav .left .item .tv {
+    position: absolute;
+    display: none;
+}
+
+nav .left .item:hover .tv {
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    top: 2rem;
+    text-transform: none;
+    border-radius: 0.4rem;
+    background: #192133;
+    width: 10rem;
+    left: 0;
+    transform: translate(-20%, 0);
+}
+
+nav .left .item:hover .tv a {
+    font-size: 0.8rem !important;
+    padding: 0.6rem 0.8rem;
+    color: white !important;
+    text-decoration: none;
+}
+
+nav .left .item .tv a:hover {
+    background: #030B17;
+}
+
+nav .left .item .tv a:hover:first-child {
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+}
+
+nav .left .item .tv a:hover:last-child {
+    border-bottom-left-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+}
+
+.left .kids {
+    text-decoration: none;
+    font-size: 1rem !important;
     color: #FFAA05 !important;
-    font-weight: 700 !important;
-    font-style: italic;
+    font-weight: 900 !important;
+    transform: skew(10deg);
+}
+.left .kids:hover{
+    color: #1f80e0 !important;
 }
 
 nav .right {
@@ -263,6 +309,16 @@ nav .right .inputbox .input input:focus {
     gap: 0.5rem;
     align-items: center;
     color: var(--primary);
+    padding: 0.04rem;
+}
+
+.trendingDiv .CardItem .item .detail .watch:hover,
+.trendingDiv .CardItem .item .detail .watchlist:hover,
+.recommendDiv .CardItem .item .detail .watch:hover,
+.recommendDiv .CardItem .item .detail .watchlist:hover,
+.animeDiv .CardItem .item .detail .watch:hover,
+.animeDiv .CardItem .item .detail .watchlist:hover {
+    background: #1f80e0;
 }
 
 .trendingDiv .CardItem .item .detail .watch i,
@@ -271,6 +327,7 @@ nav .right .inputbox .input input:focus {
 .recommendDiv .CardItem .item .detail .watchlist i,
 .animeDiv .CardItem .item .detail .watch i,
 .animeDiv .CardItem .item .detail .watchlist i {
+    margin-left: 0.2rem;
     font-size: 0.4rem;
     color: var(--primary);
 }
@@ -311,6 +368,7 @@ nav .right .inputbox .input input:focus {
     cursor: pointer;
     color: #e4e4e4;
     font-weight: 600;
+    width: fit-content;
 }
 
 .footer .detail .links a:hover {
@@ -340,6 +398,7 @@ nav .right .inputbox .input input:focus {
 
 .footer .social .links a {
     text-decoration: none;
+    width: fit-content;
 }
 
 .footer .social span,
@@ -347,6 +406,7 @@ nav .right .inputbox .input input:focus {
     color: #e4e4e4;
     font-size: 0.9rem;
     font-weight: 600;
+    width: fit-content;
 }
 
 .footer .social .links i {
