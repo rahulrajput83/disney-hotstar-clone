@@ -32,6 +32,8 @@ nav .left .menu {
     align-items: center;
     gap: 0.2rem;
     height: fit-content;
+    position: relative;
+    padding: 0.6rem;
 }
 
 nav .left .menu .line {
@@ -40,6 +42,8 @@ nav .left .menu .line {
     width: 1.2rem;
     display: block;
 }
+
+
 
 nav .left img {
     transform: translate(0, -10%);
@@ -64,12 +68,14 @@ nav .item:hover {
     color: white !important;
 }
 
-nav .left .item .tv {
+nav .left .item .tv,
+nav .left .menu .tv {
     position: absolute;
     display: none;
 }
 
-nav .left .item:hover .tv {
+nav .left .item:hover .tv,
+nav .left .menu:hover .tv {
     display: flex;
     flex-direction: column;
     z-index: 999;
@@ -82,23 +88,27 @@ nav .left .item:hover .tv {
     transform: translate(-20%, 0);
 }
 
-nav .left .item:hover .tv a {
+nav .left .item:hover .tv a,
+nav .left .menu:hover .tv a {
     font-size: 0.8rem !important;
     padding: 0.6rem 0.8rem;
     color: white !important;
     text-decoration: none;
 }
 
-nav .left .item .tv a:hover {
+nav .left .item .tv a:hover,
+nav .left .menu .tv a:hover {
     background: #030B17;
 }
 
-nav .left .item .tv a:hover:first-child {
+nav .left .item .tv a:hover:first-child,
+nav .left .menu .tv a:hover:first-child {
     border-top-left-radius: 0.4rem;
     border-top-right-radius: 0.4rem;
 }
 
-nav .left .item .tv a:hover:last-child {
+nav .left .item .tv a:hover:last-child,
+nav .left .menu .tv a:hover:last-child {
     border-bottom-left-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem;
 }
@@ -110,7 +120,8 @@ nav .left .item .tv a:hover:last-child {
     font-weight: 900 !important;
     transform: skew(10deg);
 }
-.left .kids:hover{
+
+.left .kids:hover {
     color: #1f80e0 !important;
 }
 
@@ -460,6 +471,11 @@ nav .right .inputbox .input input:focus {
         gap: 1rem;
     }
 
+    nav .left .menu:hover .tv {
+        top: 2rem !important;
+        transform: translate(0, 0) !important;
+    }
+
     .footer {
         padding: 1rem;
         gap: 2rem;
@@ -484,7 +500,7 @@ nav .right .inputbox .input input:focus {
         align-items: flex-start;
     }
 
-    nav .left span {
+    nav .left .item {
         display: none;
     }
 
