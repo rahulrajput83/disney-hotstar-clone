@@ -4,7 +4,7 @@ let scroll = 0;
 
 btn.addEventListener('click', () => {
     ele.style.overflowX = 'scroll';
-    scroll += 100;
+    scroll += 400;
     console.log(scroll);
     ele.scrollTo(scroll, 0);
     /* setDefault(); */
