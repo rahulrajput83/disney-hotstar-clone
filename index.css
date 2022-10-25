@@ -229,6 +229,7 @@ nav .right .inputbox .input input:focus {
 .trendingDiv .CardItem,
 .recommendDiv .CardItem,
 .animeDiv .CardItem {
+    scroll-snap-type: x mandatory;
     transition: all 0.5s ease-in-out;
     display: flex;
     align-items: center;
@@ -246,7 +247,7 @@ nav .right .inputbox .input input:focus {
 
 .recommendDiv .fa-angle-right {
     position: absolute;
-    background-image: linear-gradient(to right, rgba(19, 25, 39, 0.1), rgba(19, 25, 39, 1));
+    background-image: linear-gradient(to right, rgba(19, 25, 39, 0.1), rgba(19, 25, 39, 2));
     padding: 0 1.2rem;
     height: 72%;
     margin: auto;
@@ -255,7 +256,7 @@ nav .right .inputbox .input input:focus {
     font-size: 1.5rem;
     top: 0;
     transform: translate(0, 23%);
-    right: 0.5rem;
+    right: 0;
     z-index: 50;
     display: none;
     justify-content: center;
@@ -586,6 +587,13 @@ nav .right .inputbox .input input:focus {
     .recommendDiv .CardItem .item img,
     .animeDiv .CardItem .item img {
         width: 10rem;
+    }
+    .recommendDiv .fa-angle-right {
+        display: none;
+    }
+
+    .recommendDiv:hover .fa-angle-right {
+        display: none;
     }
     .recommendDiv .fa-angle-right {
         display: none;
