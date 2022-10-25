@@ -1,5 +1,5 @@
 const ele = document.querySelector('.recommendCard');
-const btn = document.querySelector('.fa-angle-right');
+const btn = document.querySelector('.recommendDiv .fa-angle-right');
 const Name = document.querySelector('.scroll .name');
 const tag1 = document.querySelector('.scroll .tag1');
 const tag2 = document.querySelector('.scroll .tag2');
@@ -105,4 +105,4 @@ setInterval(() => {
         index++;
         corousel();
     }
-}, 4000)
+}, 5000)
