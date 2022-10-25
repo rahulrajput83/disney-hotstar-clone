@@ -9,7 +9,10 @@ const link = document.querySelector('.scroll');
 const img = document.querySelector('.scroll .img');
 const left = document.querySelector('.corousel .fa-angle-left');
 const right = document.querySelector('.corousel .fa-angle-right');
+const inputField = document.querySelector('.inputField');
+const inputline = document.querySelector('.inputbox .line');
 let scroll = 0;
+
 
 btn.addEventListener('click', () => {
     ele.style.overflowX = 'scroll';
@@ -106,3 +109,11 @@ setInterval(() => {
         corousel();
     }
 }, 5000)
+
+inputField.addEventListener('focus', () => {
+    inputline.style.background = '#1f80e0';
+})
+
+inputField.addEventListener('blur', () => {
+    inputline.style.background = 'var(--primary)';
+})
